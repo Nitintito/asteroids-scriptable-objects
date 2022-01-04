@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 2970632031999273633}
   - component: {fileID: 6578066716522484772}
   - component: {fileID: 2970632031999273632}
+  - component: {fileID: 8005182672399265328}
   m_Layer: 0
   m_Name: Ship
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,6 +105,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8005182672399265328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2970632031999273636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51bd41b2f76418d40a7c873cb7641d50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onScreenExitEvent: {fileID: 11400000, guid: 4e71baa4dac584f4c92c4b5dfa61c8d8, type: 2}
+  ShipRenderers: []
 --- !u!1 &2970632032652603877
 GameObject:
   m_ObjectHideFlags: 0

@@ -38,35 +38,43 @@ namespace Asteroids
         
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (string.Equals(other.tag, "Laser"))
+            if (string.Equals(other.tag, "Laser") || other.CompareTag("Player"))
             {
-               HitByLaser();
+               HitByLaserOrPlayer();
             }
         }
 
-        private void HitByLaser()
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                HitByLaserOrPlayer();
+            }
+        }
+
+        private void HitByLaserOrPlayer()
         {
             _onAsteroidDestroyed.Raise(_instanceId);
             Destroy(gameObject);
         }
 
-        // TODO Can we move this to a single listener, something like an AsteroidDestroyer?
-        public void OnHitByLaser(IntReference asteroidId)
-        {
-            if (_instanceId == asteroidId.GetValue())
-            {
-                Destroy(gameObject);
-            }
-        }
-        
-        public void OnHitByLaserInt(int asteroidId)
-        {
-            if (_instanceId == asteroidId)
-            {
-                Destroy(gameObject);
-            }
-        }
-        
+        /*// TODO Can we move this to a single listener, something like an AsteroidDestroyer?
+      public void OnHitByLaser(IntReference asteroidId)
+     {
+         if (_instanceId == asteroidId.GetValue())
+         {
+             Destroy(gameObject);
+         }
+     }
+
+     public void OnHitByLaserInt(int asteroidId)
+     {
+         if (_instanceId == asteroidId)
+         {
+             Destroy(gameObject);
+         }
+     }*/
+
         private void SetDirection()
         {
             var size = new Vector2(3f, 3f);
