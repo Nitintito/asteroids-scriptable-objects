@@ -9,8 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f38b9d37c3e400ca179cd323a754360, type: 3}
-  m_Name: New Float Var
+  m_Script: {fileID: 11500000, guid: ad5d1e642642414780f69dc4978c122e, type: 3}
+  m_Name: OnScreenExitEvent
   m_EditorClassIdentifier: 
-  _value: 12.2
-  _developerDescription: 
