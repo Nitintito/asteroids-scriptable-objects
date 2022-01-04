@@ -20,7 +20,7 @@ namespace DefaultNamespace.GameEvents
             _event?.Invoke();
         }
 
-        public void RegisterListener(GameEventListener listener)
+        public void Register(GameEventListener listener)
         {
             _listeners.Add(listener);
         }
@@ -30,7 +30,7 @@ namespace DefaultNamespace.GameEvents
             _event += onEvent;
         }
 
-        public void UnregisterListener(GameEventListener listener)
+        public void Unregister(GameEventListener listener)
         {
             _listeners.Remove(listener);
         }

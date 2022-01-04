@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Asteroid
   - Laser
-  - Ship
   layers:
   - Default
   - TransparentFX
