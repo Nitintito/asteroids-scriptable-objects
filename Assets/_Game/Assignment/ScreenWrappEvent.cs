@@ -5,7 +5,7 @@ using DefaultNamespace.GameEvents;
 
 public class ScreenWrappEvent : MonoBehaviour
 {
-    [SerializeField] private GameEventVector3 _onScreenExitEvent;
+    [SerializeField] private GameEvent _onScreenExitEvent;
     [SerializeField] Renderer[] ShipRenderers;
 
     Camera mainCam;
@@ -23,7 +23,7 @@ public class ScreenWrappEvent : MonoBehaviour
     {
         if (!InsideCamera())
         {
-            _onScreenExitEvent.Raise(transform.position);
+            _onScreenExitEvent.Raise();
         }
     }
 

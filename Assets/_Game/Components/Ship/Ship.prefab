@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6578066716522484772}
   - component: {fileID: 2970632031999273632}
   - component: {fileID: 8005182672399265328}
+  - component: {fileID: 2970632032457142646}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Player
@@ -52,8 +53,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _throttlePower: {fileID: 11400000, guid: beb4542c9c678f14cb3e3a74aead4314, type: 2}
   _rotationPower: {fileID: 11400000, guid: eb6f17e4493560c4b9750572ccc4f906, type: 2}
-  _throttlePowerSimple: 0
-  _rotationPowerSimple: 0
+  _throttlePowerSimple: 2.76
+  _rotationPowerSimple: 5.85
 --- !u!114 &2970632031999273633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,8 +118,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51bd41b2f76418d40a7c873cb7641d50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _onScreenExitEvent: {fileID: 11400000, guid: 4e71baa4dac584f4c92c4b5dfa61c8d8, type: 2}
+  _onScreenExitEvent: {fileID: 11400000, guid: aa09b7af384d5584b802fa5918ca212c, type: 2}
   ShipRenderers: []
+--- !u!114 &2970632032457142646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2970632031999273636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92be6794e2d44eaf8f34dd73e7e77ebb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEvent: {fileID: 11400000, guid: aa09b7af384d5584b802fa5918ca212c, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8005182672399265328}
+        m_TargetAssemblyTypeName: ScreenWrappEvent, Assembly-CSharp
+        m_MethodName: ScreenWrap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2970632032652603877
 GameObject:
   m_ObjectHideFlags: 0

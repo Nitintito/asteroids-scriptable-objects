@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad5d1e642642414780f69dc4978c122e, type: 3}
+  m_Script: {fileID: 11500000, guid: b7e8dd7add53403aa2e91c96e9aef9c3, type: 3}
   m_Name: OnScreenExitEvent
   m_EditorClassIdentifier: 
